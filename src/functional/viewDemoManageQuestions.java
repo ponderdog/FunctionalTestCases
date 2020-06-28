@@ -1,5 +1,3 @@
-//Inactivate and Activate an Employee
-
 package functional;
 
 import org.openqa.selenium.By;
@@ -8,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class inactivateActivateEmployee {
+public class viewDemoManageQuestions {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -26,16 +24,11 @@ public class inactivateActivateEmployee {
 		action.moveToElement(driver.findElement(By.xpath("//input[@name='TxtPassword']"))).click().sendKeys("Dallas@2019").build().perform();
 		action.moveToElement(driver.findElement(By.xpath("//input[@name='btnNewLogin']"))).click().build().perform();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[@id='employeemenu']")).click();
-		driver.findElement(By.id("EmpDtl_ctl39_DelBtn")).click();
-		driver.switchTo().alert().accept();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[@id='lnkArchiveEmp']")).click();
-		driver.findElement(By.id("EmpDtl_ctl47_BtnActivate")).click();
-		driver.switchTo().alert().accept();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[@id='lnkActiveEmp']")).click();
-		driver.close();
+		driver.findElement(By.xpath("//a[contains(text(),'Test')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Manage Question(s)')]")).click();
+		driver.findElement(By.xpath("//input[@id='imgViewDemo']")).click();
+		Thread.sleep(2000);
+		driver.quit();
 	}
 	
 }

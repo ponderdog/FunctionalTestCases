@@ -28,11 +28,11 @@ public class completePolicy {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[contains(text(),'Policy')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Assign Policy')]")).click();
-		driver.findElement(By.xpath("//a[@id='gvCourse_ctl06_HyperLink1']")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'TPCA POLICY')]")).click();
 		driver.findElement(By.xpath("//input[@id='rptLevel_ctl01_rptLevelContent_ctl03_chkpublishLevelContent']")).click();
 		driver.findElement(By.xpath("//input[@id='btnpublish']")).click();
 		driver.findElement(By.xpath("//input[@id='btnAssignSelected']")).click();
-		driver.findElement(By.xpath("//input[@id='TabIntExternalEmpList_PanlInternal_EmpDtl_ctl34_chkId']")).click();
+		driver.findElement(By.id("TabIntExternalEmpList_PanlInternal_EmpDtl_ctl37_chkId")).click();
 		driver.findElement(By.xpath("//input[@id='btnTopContinue']")).click();
 		driver.findElement(By.xpath("//input[@id='TabContainer1_TabPanel1_GvAssignPolicyDoc_ctl02_BtnFromdate']")).click();
 		driver.findElement(By.xpath("//div[@id='TabContainer1_TabPanel1_GvAssignPolicyDoc_ctl02_CalendarExtender21_today']")).click();
@@ -41,7 +41,7 @@ public class completePolicy {
 		driver.findElement(By.xpath("//input[@id='BtnSave']")).click();
 		driver.findElement(By.xpath("//input[@id='btnCloseContent1']")).click();
 		driver.findElement(By.xpath("//a[@id='homelogo']")).click();
-		driver.findElement(By.xpath("//a[@id='gvPolicy_ctl02_lnkPolicyContent']")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'1.3 Fiscal Management')]")).click();
 		String parentHandle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles())
 		{

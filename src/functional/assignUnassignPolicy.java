@@ -29,7 +29,8 @@ public class assignUnassignPolicy {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[contains(text(),'Policy')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Assign Policy')]")).click();
-		driver.findElement(By.xpath("//a[@id='gvCourse_ctl06_HyperLink1']")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'TPCA POLICY')]")).click();
+		//driver.findElement(By.xpath("//a[@id='gvCourse_ctl06_HyperLink1']")).click();
 		driver.findElement(By.xpath("//input[@id='rptLevel_ctl01_rptLevelContent_ctl03_chkpublishLevelContent']")).click();
 		driver.findElement(By.xpath("//input[@id='btnpublish']")).click();
 		driver.findElement(By.xpath("//input[@id='btnAssignSelected']")).click();
@@ -41,6 +42,7 @@ public class assignUnassignPolicy {
 		driver.findElement(By.xpath("//div[@id='TabContainer1_TabPanel1_GvAssignPolicyDoc_ctl02_CalendarExtender1_today']")).click();
 		driver.findElement(By.xpath("//input[@id='BtnSave']")).click();
 		driver.findElement(By.xpath("//input[@id='btnCloseContent1']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='BtnUnAssign']")).click();
 		driver.findElement(By.xpath("//a[@id='EmpDtl_ctl02_lnkView']")).click();
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='ifrmAssessmentLog']")));
@@ -52,6 +54,7 @@ public class assignUnassignPolicy {
         String winHandleBefore=driver.getWindowHandle();
         driver.switchTo().window(winHandleBefore);
 		driver.findElement(By.xpath("//input[@id='imgbCloseLog']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@class='logout']")).click();
 		driver.close();
 	}

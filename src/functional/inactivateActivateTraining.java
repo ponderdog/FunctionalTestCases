@@ -31,7 +31,7 @@ public class inactivateActivateTraining {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[contains(text(),'Activate')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.id("TabContainer_panelActiveTr_gvActiveTrList_ctl04_lnkDeactive")).click();
+		driver.findElement(By.id("TabContainer_panelActiveTr_gvActiveTrList_ctl05_lnkDeactive")).click();
 		Thread.sleep(2000);
 		Alert alert = driver.switchTo().alert();
 		alert.accept();

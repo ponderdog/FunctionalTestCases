@@ -33,7 +33,7 @@ public class inactivateActivatePolicy {
 		driver.findElement(By.xpath("//a[contains(text(),'List and Add Policy Category')]")).click();
 		driver.findElement(By.xpath("//select[@id='ddlCourseView']")).click();
 		driver.findElement(By.xpath("//option[contains(text(),'Grid')]")).click();
-		driver.findElement(By.id("gvCourse_ctl09_lnkInActive")).click();
+		driver.findElement(By.id("gvCourse_ctl14_lnkInActive")).click();
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
 		driver.findElement(By.id("ddlActive")).click();
@@ -41,7 +41,7 @@ public class inactivateActivatePolicy {
 		Thread.sleep(5000);
 		driver.findElement(By.id("rptPager_ctl06_lnkPage")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.id("gvCourse_ctl29_lnkActive")).click();
+		driver.findElement(By.id("gvCourse_ctl35_lnkActive")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[contains(text(),'Policy')]")).click();
 		Thread.sleep(2000);

@@ -25,7 +25,7 @@ public class viewDemoHome {
 		action.moveToElement(driver.findElement(By.xpath("//input[@name='btnNewLogin']"))).click().build().perform();
 		Thread.sleep(5000);
 		driver.findElement(By.id("imgViewDemo")).click();
-		
+		driver.quit();
 
 	}
 

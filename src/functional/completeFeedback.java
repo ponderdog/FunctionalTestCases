@@ -33,17 +33,30 @@ public class completeFeedback {
 		action.moveToElement(hoverAssign).build().perform();
 		Thread.sleep(2000);
 		driver.findElement(By.id("gvCertificationList_ctl08_LnkAssign")).click();
-		driver.findElement(By.id("EmpDtl_ctl34_ChkSelectEmp")).click();
+		driver.findElement(By.id("EmpDtl_ctl37_ChkSelectEmp")).click();
 		driver.findElement(By.id("btnDone")).click();
 		action.moveToElement(driver.findElement(By.xpath("//input[@id='TxtCompletionDate']"))).click().sendKeys("12/31/2050").build().perform();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[contains(text(),'Close')]")).click();
 		driver.findElement(By.id("btnAssign")).click();
 		driver.findElement(By.xpath("//a[@id='homelogo']//img")).click();
-		driver.findElement(By.id("tcSurveys_tpPending_GrdViewSurveys_ctl02_lnkSurveyName")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Assessment Checklist')]")).click();
+
+		for (String winHandle : driver.getWindowHandles())
+		{
+			driver.switchTo().window(winHandle);
+		}
+		
 		driver.findElement(By.id("btnSubmit")).click();
-		driver.findElement(By.id("BtnSend")).click();	
-		driver.close();
+		driver.findElement(By.id("BtnSend")).click();
+		
+		for (String winHandle : driver.getWindowHandles())	
+		{
+			driver.switchTo().window(winHandle);
+		}
+		
+
+		driver.quit();	
 	}
 	
 }

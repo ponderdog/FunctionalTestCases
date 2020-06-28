@@ -28,11 +28,12 @@ public class completeTraining {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//a[contains(text(),'Training')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Assign Training')]")).click();
-		driver.findElement(By.id("GridviewTraining_ctl04_ChkTraining")).click();
-		driver.findElement(By.xpath("//input[@id='btnAssign']")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'ALERRT - Active Shooter')]")).click();
+		driver.findElement(By.xpath("//input[@id='btnUpdateAssign']")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//input[@id='btnAssignSelected']")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("/html[1]/body[1]/form[1]/div[3]/table[2]/tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[4]/td[1]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/div[1]/table[1]/tbody[1]/tr[34]/td[1]/span[1]/input[1]")).click();
+		driver.findElement(By.id("TabIntExternalEmpList_PanlInternal_EmpDtl_ctl37_chkId")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//input[@id='btnEmployeeNew']")).click();	
 		driver.findElement(By.id("TabContainer1_TabPanel1_GridviewAssign_ctl02_GridviewTraining_ctl02_BtnFromdate")).click();
@@ -42,7 +43,7 @@ public class completeTraining {
 		driver.findElement(By.xpath("//input[@id='BtnSave']")).click();
 		driver.findElement(By.xpath("//input[@id='btnCloseContent1']")).click();
 		driver.findElement(By.xpath("//a[@id='homelogo']")).click();
-		driver.findElement(By.id("EmpGrid_ctl02_lnkTrngName")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'ALERRT - Active Shooter')]")).click();
 		String parentHandle = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles())
 		{
